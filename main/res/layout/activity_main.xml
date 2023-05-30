@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_margin_vertical"
+    android:paddingTop="@dimen/activity_margin_vertical"
+    android:paddingRight="@dimen/activity_margin_horizontal"
+    android:paddingLeft="@dimen/activity_margin_horizontal"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/operand_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/operand_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:onClick="onAdd"/>
+        <Button
+            android:id="@+id/sub_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_toEndOf="@id/add_btn"
+            android:layout_toRightOf="@id/add_btn"
+            android:onClick="onSub"/>
+    <Button
+        android:id="@+id/div_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:layout_below="@id/add_btn"
+        android:onClick="onDiv"/>
+    <Button
+        android:id="@+id/mul_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:layout_below="@id/add_btn"
+        android:layout_toEndOf="@id/add_btn"
+        android:layout_toRightOf="@id/add_btn"
+        android:onClick="onMul"/>
+</RelativeLayout>
+    <TextView
+        android:id="@+id/Result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin_vertical"/>
+</LinearLayout>
